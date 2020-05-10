@@ -7,7 +7,7 @@ badges: true
 comments: true
 author: Cleber Jorge Amaral
 categories: [jupyter]
-image: images/brazil-states-linear-case-and-deaths-accumulated.png
+image: images/brazil-states-linear-cases-and-deaths-newcases.png
 nb_path: _notebooks/2020-05-08-brazil-states-linear-cases-and-deaths-newcases.ipynb
 layout: notebook
 ---
