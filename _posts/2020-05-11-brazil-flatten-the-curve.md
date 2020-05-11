@@ -7,7 +7,7 @@ badges: true
 comments: true
 author: Cleber Jorge Amaral
 categories: [jupyter]
-image: images/brazil-states-linear-cases-and-deaths-newcases.png
+image: images/brazil-flatten-the-curve.png
 nb_path: _notebooks/2020-05-11-brazil-flatten-the-curve.ipynb
 layout: notebook
 ---
