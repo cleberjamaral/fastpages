@@ -26,7 +26,7 @@ jobs:
       if: github.event_name == 'issues'
       uses: actions/github-script@0.6.0
       with:
-        github-token: ${{secrets.SSH_DEPLOY_KEY}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           var run_id = process.env.RUN_ID;
           github.issues.createComment({
@@ -69,7 +69,7 @@ jobs:
       if: github.event_name == 'schedule' && steps.update_nb.outputs.error_bool == 'true'
       uses: actions/github-script@0.6.0
       with:
-        github-token: ${{secrets.SSH_DEPLOY_KEY}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           var err = process.env.ERROR_STRING;
           var run_id = process.env.RUN_ID;
@@ -124,7 +124,7 @@ jobs:
       if: github.event_name == 'issues' && steps.update_nb.outputs.error_bool == 'true'
       uses: actions/github-script@0.6.0
       with:
-        github-token: ${{secrets.SSH_DEPLOY_KEY}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           var run_id = process.env.RUN_ID;
           var err = process.env.ERROR_STRING;
@@ -142,7 +142,7 @@ jobs:
       if: failure() && github.event_name == 'issues'
       uses: actions/github-script@0.6.0
       with:
-        github-token: ${{secrets.SSH_DEPLOY_KEY}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           var run_id = process.env.RUN_ID;
           github.issues.createComment({
@@ -158,7 +158,7 @@ jobs:
       if: github.event_name == 'issues' && steps.update_nb.outputs.error_bool == 'false'
       uses: actions/github-script@0.6.0
       with:
-        github-token: ${{secrets.SSH_DEPLOY_KEY}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
           github.issues.createComment({
             issue_number: context.issue.number,
