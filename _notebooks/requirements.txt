@@ -17,7 +17,6 @@ jinja2
 selenium
 geopandas
 tika
-multiprocessing
 tensorflow_hub
 numpy
 re
