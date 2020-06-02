@@ -17,8 +17,9 @@ jinja2
 selenium
 geopandas
 tika
-tensorflow_hub
 tensorflow
+tensorflow_text
+tensorflow_hub
 numpy
 bs4
 requests
