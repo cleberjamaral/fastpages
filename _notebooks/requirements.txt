@@ -18,7 +18,9 @@ selenium
 geopandas
 tika
 tensorflow_hub
+tensorflow
 numpy
 bs4
 requests
 absl-py
+wheel
