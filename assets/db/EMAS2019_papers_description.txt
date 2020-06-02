@@ -1,0 +1,18 @@
+From Goals to Organisations: automated organisation generator for MAS? Cleber Jo
+Jacamo-web is on the fly: an interactive Multi-Agent System IDE? Cleber Jorge Am
+SAT for Epistemic Logic using Belief Bases Fabián Romero1 and Emiliano Lorini1 
+JS-son - A Minimal JavaScript BDI Agent Library Timotheus Kampik and Juan Carlos
+An Architecture for Integrating BDI Agents with a Simulation Environment Alan Da
+Using MATSim as a Component in Dynamic Agent-Based Micro-Simulations Dhirendra S
+Plan Library Reconfigurability in BDI Agents? Rafael C. Cardoso, Louise A. Denni
+Incorporating social practices in BDI agent systems Stephen Cranefield1 and Fran
+Accountability and Agents for Engineering Business Processes Matteo Baldoni1, Cr
+The “Why did you do that?” Button: Answering Why-questions for end users of Robo
+Concurrency and Asynchrony in Protocol Languages Amit K. Chopra1, Samuel H. Chri
+On Enactability of Agent Interaction Protocols: Towards a Unified Approach Angel
+Who’s that? - Modelling Social Situations for Behaviour Support Agents? Ilir Kol
+What Does It Take to Create Social Awareness for Support Agents?? Ilir Kola1, Ca
+An Introduction to Engineering Multiagent Industrial Symbiosis Systems: Potentia
+From Programming Agents to Educating Agents – A Jason-based Framework for Integr
+Hercule: Reasoning about Norms over Unstructured Events Samuel H. Christie V1, A
+Agents are More Complex than Other Software: An Empirical Investigation Alon T. 
