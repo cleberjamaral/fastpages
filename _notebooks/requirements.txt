@@ -21,3 +21,4 @@ tensorflow_hub
 numpy
 bs4
 requests
+absl-py
