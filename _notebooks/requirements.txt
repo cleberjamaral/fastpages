@@ -25,3 +25,4 @@ bs4
 requests
 absl-py
 wheel
+scipy
