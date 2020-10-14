@@ -24,17 +24,6 @@
   
     
         ,"post2": {
-            "title": "Comparativo de novos casos por dia por estado [in Portuguese]",
-            "content": "NOTA . Os dados utilizados nestas análises são inerentemente incertos. Não há garantia de que os dados e as análises estejam devidamente atualizados e corretos. Antes de tomar conclusões é fundamental verificar dados e conclusões com outras fontes. . df = src[(src[&#39;place_type&#39;] == &#39;state&#39;)] df = df.rename(columns={&#39;date&#39;: DATE_COLUMN, &#39;state&#39;: STATE_COLUMN, &#39;confirmed&#39;: NEWCONFIRMED_CASES, &#39;deaths&#39;: NEWDEATH_COLUMN}) df.head() . Data Estado city place_type Confirmado Obito order_for_place is_last estimated_population_2019 estimated_population city_ibge_code confirmed_per_100k_inhabitants death_rate . 0 2020-10-10 | AP | NaN | state | 49303 | 725 | 204 | True | 845731.0 | 861773.0 | 16.0 | 5721.11217 | 0.0147 | . 1 2020-10-09 | AP | NaN | state | 49215 | 725 | 203 | False | 845731.0 | 861773.0 | 16.0 | 5710.90067 | 0.0147 | . 2 2020-10-08 | AP | NaN | state | 49085 | 724 | 202 | False | 845731.0 | 861773.0 | 16.0 | 5695.81549 | 0.0147 | . 3 2020-10-07 | AP | NaN | state | 48963 | 722 | 201 | False | 845731.0 | 861773.0 | 16.0 | 5681.65863 | 0.0147 | . 4 2020-10-06 | AP | NaN | state | 48814 | 721 | 200 | False | 845731.0 | 861773.0 | 16.0 | 5664.36869 | 0.0148 | . df[DATE_COLUMN] = pd.to_datetime(df[DATE_COLUMN]) df[DATE_COLUMN] = df[DATE_COLUMN].dt.strftime(&#39;%m/%d/%y&#39;) . Última atualização em 10/10/2020 Based on works developed by Alonso Silva Allende, adapted by Cleber Jorge Amaral. Data source: brasil.io .",
-            "url": "https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/08/brazil-states-linear-cases-and-deaths-newcases.html",
-            "relUrl": "/covid-19/brasil/comparativo/altair/jupyter/2020/05/08/brazil-states-linear-cases-and-deaths-newcases.html",
-            "date": " • May 8, 2020"
-        }
-        
-    
-  
-    
-        ,"post3": {
             "title": "Comparativo casos acumulados por estado [in Portuguese]",
             "content": "NOTA . Os dados utilizados nestas análises são inerentemente incertos. Não há garantia de que os dados e as análises estejam devidamente atualizados e corretos. Antes de tomar conclusões é fundamental verificar dados e conclusões com outras fontes. . Última atualização em 10/10/2020 Based on works developed by Alonso Silva Allende, adapted by Cleber Jorge Amaral. Data source: brasil.io .",
             "url": "https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/08/brazil-states-linear-case-and-deaths-accumulated.html",
@@ -45,9 +34,9 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "Comparativo trajetória por estado [in Portuguese]",
-            "content": "NOTA . Os dados utilizados nestas análises são inerentemente incertos. Não há garantia de que os dados e as análises estejam devidamente atualizados e corretos. Antes de tomar conclusões é fundamental verificar dados e conclusões com outras fontes. . pip install lzma . Defaulting to user installation because normal site-packages is not writeable ERROR: Could not find a version that satisfies the requirement lzma (from versions: none) ERROR: No matching distribution found for lzma Note: you may need to restart the kernel to use updated packages. . Based on the notebook developed by Pratap Vardhan, adapted by Cleber Jorge Amaral. Data source: brasil.io .",
+            "content": "NOTA . Os dados utilizados nestas análises são inerentemente incertos. Não há garantia de que os dados e as análises estejam devidamente atualizados e corretos. Antes de tomar conclusões é fundamental verificar dados e conclusões com outras fontes. . Última atualização em 10/10/2020 Based on the notebook developed by Pratap Vardhan, adapted by Cleber Jorge Amaral. Data source: brasil.io .",
             "url": "https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html",
             "relUrl": "/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html",
             "date": " • May 5, 2020"
