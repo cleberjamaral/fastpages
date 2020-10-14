@@ -1,7 +1,7 @@
 name: Update Notebooks And Refresh Page
 on:
-  schedule:
-    - cron:  '0 */6 * * *'
+  #schedule:
+    #- cron:  '0 */6 * * *'
   issues:
     types: [opened]
 
@@ -10,7 +10,7 @@ jobs:
     if: (github.event_name == 'schedule' || (github.event.issue.title == '[dashboard] Refresh Notebooks'  && github.actor == 'cleberjamaral' && github.event_name == 'issues')) && github.repository == 'cleberjamaral/fastpages'
     runs-on: ubuntu-latest
     steps:
-  
+
     - name: See event name
       run: |
         echo "title ${title}"
@@ -105,12 +105,12 @@ jobs:
         args: bash -c "gem install bundler && jekyll build -V"
       env:
         JEKYLL_ENV: 'production'
-        
+
     - name: copy CNAME file into _site if CNAME exists
       run: |
         sudo chmod -R 777 _site/
         cp CNAME _site/ 2>/dev/null || :
-        
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -137,7 +137,7 @@ jobs:
       env:
         ERROR_STRING: ${{ steps.update_nb.outputs.error_str }}
         RUN_ID: ${{ github.run_id	 }}
-  
+
     - name: Comment on issue if failure in workflow
       if: failure() && github.event_name == 'issues'
       uses: actions/github-script@0.6.0
