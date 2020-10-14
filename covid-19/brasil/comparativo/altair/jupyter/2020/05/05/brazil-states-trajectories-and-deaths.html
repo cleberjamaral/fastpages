@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Comparativo trajetória por estado [in Portuguese] | Cleber’s Notebooks</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Comparativo trajetória por estado [in Portuguese]" />
+<meta name="author" content="Cleber Jorge Amaral" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Casos confirmados (escala logarítmica)" />
+<meta property="og:description" content="Casos confirmados (escala logarítmica)" />
+<link rel="canonical" href="https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html" />
+<meta property="og:url" content="https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html" />
+<meta property="og:site_name" content="Cleber’s Notebooks" />
+<meta property="og:image" content="https://cleberjamaral.github.io/fastpages/images/brazil-states-cases-trajectories.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Cleber Jorge Amaral"},"description":"Casos confirmados (escala logarítmica)","@type":"BlogPosting","headline":"Comparativo trajetória por estado [in Portuguese]","dateModified":"2020-05-05T00:00:00-05:00","datePublished":"2020-05-05T00:00:00-05:00","url":"https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html"},"image":"https://cleberjamaral.github.io/fastpages/images/brazil-states-cases-trajectories.png","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://cleberjamaral.github.io/fastpages/feed.xml" title="Cleber's Notebooks" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Comparativo trajetória por estado [in Portuguese] | Cleber’s Notebooks</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Comparativo trajetória por estado [in Portuguese]" />
+<meta name="author" content="Cleber Jorge Amaral" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Casos confirmados (escala logarítmica)" />
+<meta property="og:description" content="Casos confirmados (escala logarítmica)" />
+<link rel="canonical" href="https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html" />
+<meta property="og:url" content="https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html" />
+<meta property="og:site_name" content="Cleber’s Notebooks" />
+<meta property="og:image" content="https://cleberjamaral.github.io/fastpages/images/brazil-states-cases-trajectories.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Cleber Jorge Amaral"},"description":"Casos confirmados (escala logarítmica)","@type":"BlogPosting","headline":"Comparativo trajetória por estado [in Portuguese]","dateModified":"2020-05-05T00:00:00-05:00","datePublished":"2020-05-05T00:00:00-05:00","url":"https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://cleberjamaral.github.io/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html"},"image":"https://cleberjamaral.github.io/fastpages/images/brazil-states-cases-trajectories.png","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://cleberjamaral.github.io/fastpages/feed.xml" title="Cleber's Notebooks" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages/">Cleber&#39;s Notebooks</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages/about/">About Me</a><a class="page-link" href="/fastpages/search/">Search</a><a class="page-link" href="/fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Comparativo trajetória por estado [in Portuguese]</h1><p class="page-description">Casos confirmados (escala logarítmica)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-05T00:00:00-05:00" itemprop="datePublished">
+        May 5, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Cleber Jorge Amaral</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages/categories/#covid-19">covid-19</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages/categories/#brasil">brasil</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages/categories/#comparativo">comparativo</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages/categories/#altair">altair</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/cleberjamaral/fastpages/tree/master/_notebooks/2020-05-05-brazil-states-trajectories-and-deaths.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/cleberjamaral/fastpages/master?filepath=_notebooks%2F2020-05-05-brazil-states-trajectories-and-deaths.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/cleberjamaral/fastpages/blob/master/_notebooks/2020-05-05-brazil-states-trajectories-and-deaths.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-05-05-brazil-states-trajectories-and-deaths.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered celltag_papermill-error-cell-tag"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span style="color:red; font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2em;">An Exception was encountered at '<a href="#papermill-error-cell">In [21]</a>'.</span></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="NOTA">NOTA<a class="anchor-link" href="#NOTA"> </a></h3><p>Os dados utilizados nestas análises são inerentemente incertos. Não há garantia de que os dados e as análises estejam devidamente atualizados e corretos. Antes de tomar conclusões é fundamental verificar dados e conclusões com outras fontes.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">MaxRowsError</span>                              Traceback (most recent call last)
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    371</span> 
+<span class="ansi-green-intense-fg ansi-bold">    372</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 373</span><span class="ansi-red-fg">             </span>dct <span class="ansi-blue-fg">=</span> super<span class="ansi-blue-fg">(</span>TopLevelMixin<span class="ansi-blue-fg">,</span> copy<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    374</span>         <span class="ansi-green-fg">except</span> jsonschema<span class="ansi-blue-fg">.</span>ValidationError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    375</span>             dct <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, validate, ignore, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    326</span>                 <span class="ansi-blue-fg">{</span>k<span class="ansi-blue-fg">:</span> v <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>_kwds<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> k <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> ignore<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    327</span>                 validate<span class="ansi-blue-fg">=</span>sub_validate<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">--&gt; 328</span><span class="ansi-red-fg">                 </span>context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    329</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    330</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     63</span>             <span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
+<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;dictcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     62</span>             <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 63</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
+<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
+<span class="ansi-green-intense-fg ansi-bold">     65</span>     <span class="ansi-green-fg">elif</span> hasattr<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;to_dict&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>     <span class="ansi-blue-fg">&#34;&#34;&#34;Convert an object to a dict representation.&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     55</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> SchemaBase<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     58</span>         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    361</span>         copy <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span>deep<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    362</span>         original_data <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>copy<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;data&#34;</span><span class="ansi-blue-fg">,</span> Undefined<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 363</span><span class="ansi-red-fg">         </span>copy<span class="ansi-blue-fg">.</span>data <span class="ansi-blue-fg">=</span> _prepare_data<span class="ansi-blue-fg">(</span>original_data<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    364</span> 
+<span class="ansi-green-intense-fg ansi-bold">    365</span>         <span class="ansi-green-fg">if</span> original_data <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">_prepare_data</span><span class="ansi-blue-fg">(data, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>     <span class="ansi-red-fg"># convert dataframes  or objects with __geo_interface__ to dict</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">or</span> hasattr<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;__geo_interface__&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> _pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> data_transformers<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span> 
+<span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-red-fg"># convert string input to a URLData</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/data.py</span> in <span class="ansi-cyan-fg">default_data_transformer</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-blue-fg">@</span>curried<span class="ansi-blue-fg">.</span>curry
+<span class="ansi-green-intense-fg ansi-bold">     18</span> <span class="ansi-green-fg">def</span> default_data_transformer<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> max_rows<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">5000</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> curried<span class="ansi-blue-fg">.</span>pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> limit_rows<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">=</span>max_rows<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> to_values<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
+<span class="ansi-green-intense-fg ansi-bold">     21</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/data.py</span> in <span class="ansi-cyan-fg">limit_rows</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>             <span class="ansi-blue-fg">&#34;than the maximum allowed ({}). &#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>             <span class="ansi-blue-fg">&#34;For information on how to plot larger datasets &#34;</span>
+<span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#34;in Altair, see the documentation&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span>         )
+<span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-green-fg">return</span> data
+
+<span class="ansi-red-fg">MaxRowsError</span>: The number of rows in your dataset is greater than the maximum allowed (5000). For information on how to plot larger datasets in Altair, see the documentation</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>alt.LayerChart(...)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">MaxRowsError</span>                              Traceback (most recent call last)
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    371</span> 
+<span class="ansi-green-intense-fg ansi-bold">    372</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 373</span><span class="ansi-red-fg">             </span>dct <span class="ansi-blue-fg">=</span> super<span class="ansi-blue-fg">(</span>TopLevelMixin<span class="ansi-blue-fg">,</span> copy<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    374</span>         <span class="ansi-green-fg">except</span> jsonschema<span class="ansi-blue-fg">.</span>ValidationError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    375</span>             dct <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, validate, ignore, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    326</span>                 <span class="ansi-blue-fg">{</span>k<span class="ansi-blue-fg">:</span> v <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>_kwds<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> k <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> ignore<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    327</span>                 validate<span class="ansi-blue-fg">=</span>sub_validate<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">--&gt; 328</span><span class="ansi-red-fg">                 </span>context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    329</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    330</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     63</span>             <span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
+<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;dictcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     62</span>             <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 63</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
+<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
+<span class="ansi-green-intense-fg ansi-bold">     65</span>     <span class="ansi-green-fg">elif</span> hasattr<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;to_dict&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>     <span class="ansi-blue-fg">&#34;&#34;&#34;Convert an object to a dict representation.&#34;&#34;&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     55</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> SchemaBase<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     58</span>         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    361</span>         copy <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span>deep<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    362</span>         original_data <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>copy<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;data&#34;</span><span class="ansi-blue-fg">,</span> Undefined<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 363</span><span class="ansi-red-fg">         </span>copy<span class="ansi-blue-fg">.</span>data <span class="ansi-blue-fg">=</span> _prepare_data<span class="ansi-blue-fg">(</span>original_data<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    364</span> 
+<span class="ansi-green-intense-fg ansi-bold">    365</span>         <span class="ansi-green-fg">if</span> original_data <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">_prepare_data</span><span class="ansi-blue-fg">(data, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>     <span class="ansi-red-fg"># convert dataframes  or objects with __geo_interface__ to dict</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">or</span> hasattr<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;__geo_interface__&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> _pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> data_transformers<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span> 
+<span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-red-fg"># convert string input to a URLData</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/data.py</span> in <span class="ansi-cyan-fg">default_data_transformer</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-blue-fg">@</span>curried<span class="ansi-blue-fg">.</span>curry
+<span class="ansi-green-intense-fg ansi-bold">     18</span> <span class="ansi-green-fg">def</span> default_data_transformer<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> max_rows<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">5000</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> curried<span class="ansi-blue-fg">.</span>pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> limit_rows<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">=</span>max_rows<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> to_values<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
+<span class="ansi-green-intense-fg ansi-bold">     21</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/data.py</span> in <span class="ansi-cyan-fg">limit_rows</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     82</span>             <span class="ansi-blue-fg">&#34;than the maximum allowed ({}). &#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span>             <span class="ansi-blue-fg">&#34;For information on how to plot larger datasets &#34;</span>
+<span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#34;in Altair, see the documentation&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span>         )
+<span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-green-fg">return</span> data
+
+<span class="ansi-red-fg">MaxRowsError</span>: The number of rows in your dataset is greater than the maximum allowed (5000). For information on how to plot larger datasets in Altair, see the documentation</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>alt.LayerChart(...)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<small class="float-right">Última atualização em 13/10/2020</small>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Based on the <a href="https://github.com/pratapvardhan/notebooks/blob/master/covid19/covid19-compare-country-trajectories.ipynb">notebook</a> developed by <a href="https://twitter.com/PratapVardhan">Pratap Vardhan</a>, adapted by <a href="http://cleberjamaral.github.io/">Cleber Jorge Amaral</a>. Data source: <a href="https://brasil.io/home/">brasil.io</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered celltag_papermill-error-cell-tag"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span id="papermill-error-cell" style="color:red; font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2em;">Execution using papermill encountered an exception here and stopped:</span></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="cleberjamaral/fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages/covid-19/brasil/comparativo/altair/jupyter/2020/05/05/brazil-states-trajectories-and-deaths.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>This website uses fastpages</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/cleberjamaral" title="cleberjamaral"><svg class="svg-icon grey"><use xlink:href="/fastpages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/cleberjamaral" title="cleberjamaral"><svg class="svg-icon grey"><use xlink:href="/fastpages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
