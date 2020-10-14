@@ -163,13 +163,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered celltag_papermill-error-cell-tag"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><span style="color:red; font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2em;">An Exception was encountered at '<a href="#papermill-error-cell">In [19]</a>'.</span></p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -182,12 +175,12 @@ window.onload = wrap_img;
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-85a9e004c40344729f34020661ab2b44"></div>
+<div id="altair-viz-da0fe3f1f76b48829f4dc6f947b62fa6"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-85a9e004c40344729f34020661ab2b44") {
-      outputDiv = document.getElementById("altair-viz-85a9e004c40344729f34020661ab2b44");
+    if (outputDiv.id !== "altair-viz-da0fe3f1f76b48829f4dc6f947b62fa6") {
+      outputDiv = document.getElementById("altair-viz-da0fe3f1f76b48829f4dc6f947b62fa6");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -276,110 +269,110 @@ window.onload = wrap_img;
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">MaxRowsError</span>                              Traceback (most recent call last)
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    371</span> 
 <span class="ansi-green-intense-fg ansi-bold">    372</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 373</span><span class="ansi-red-fg">             </span>dct <span class="ansi-blue-fg">=</span> super<span class="ansi-blue-fg">(</span>TopLevelMixin<span class="ansi-blue-fg">,</span> copy<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    374</span>         <span class="ansi-green-fg">except</span> jsonschema<span class="ansi-blue-fg">.</span>ValidationError<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    375</span>             dct <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, validate, ignore, context)</span>
-<span class="ansi-green-intense-fg ansi-bold">    326</span>                 <span class="ansi-blue-fg">{</span>k<span class="ansi-blue-fg">:</span> v <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>_kwds<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> k <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> ignore<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, validate, ignore, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    323</span>             result <span class="ansi-blue-fg">=</span> _todict<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_args<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">=</span>sub_validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span>         <span class="ansi-green-fg">elif</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_args<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 325</span><span class="ansi-red-fg">             result = _todict(
+</span><span class="ansi-green-intense-fg ansi-bold">    326</span>                 <span class="ansi-blue-fg">{</span>k<span class="ansi-blue-fg">:</span> v <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>_kwds<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">if</span> k <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> ignore<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>
 <span class="ansi-green-intense-fg ansi-bold">    327</span>                 validate<span class="ansi-blue-fg">=</span>sub_validate<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-fg">--&gt; 328</span><span class="ansi-red-fg">                 </span>context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    329</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    330</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
-<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
-<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 62</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     63</span>             <span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
-<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
-
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;dictcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
-<span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">     58</span>         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 60</span><span class="ansi-red-fg">         return {
+</span><span class="ansi-green-intense-fg ansi-bold">     61</span>             k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     62</span>             <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 63</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
-<span class="ansi-green-intense-fg ansi-bold">     64</span>         }
-<span class="ansi-green-intense-fg ansi-bold">     65</span>     <span class="ansi-green-fg">elif</span> hasattr<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;to_dict&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;dictcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
+<span class="ansi-green-fg">---&gt; 61</span><span class="ansi-red-fg">             </span>k<span class="ansi-blue-fg">:</span> _todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     62</span>             <span class="ansi-green-fg">for</span> k<span class="ansi-blue-fg">,</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     63</span>             <span class="ansi-green-fg">if</span> v <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined
+
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
 <span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
 <span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">&lt;listcomp&gt;</span><span class="ansi-blue-fg">(.0)</span>
 <span class="ansi-green-intense-fg ansi-bold">     56</span>         <span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 58</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
 <span class="ansi-green-intense-fg ansi-bold">     59</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> dict<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">     60</span>         return {
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/schemapi.py</span> in <span class="ansi-cyan-fg">_todict</span><span class="ansi-blue-fg">(obj, validate, context)</span>
 <span class="ansi-green-intense-fg ansi-bold">     54</span>     <span class="ansi-blue-fg">&#34;&#34;&#34;Convert an object to a dict representation.&#34;&#34;&#34;</span>
 <span class="ansi-green-intense-fg ansi-bold">     55</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> SchemaBase<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 56</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> obj<span class="ansi-blue-fg">.</span>to_dict<span class="ansi-blue-fg">(</span>validate<span class="ansi-blue-fg">=</span>validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>context<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     57</span>     <span class="ansi-green-fg">elif</span> isinstance<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">(</span>list<span class="ansi-blue-fg">,</span> tuple<span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>ndarray<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">     58</span>         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">[</span>_todict<span class="ansi-blue-fg">(</span>v<span class="ansi-blue-fg">,</span> validate<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> v <span class="ansi-green-fg">in</span> obj<span class="ansi-blue-fg">]</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">to_dict</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    361</span>         copy <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span>deep<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    362</span>         original_data <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>copy<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;data&#34;</span><span class="ansi-blue-fg">,</span> Undefined<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">--&gt; 363</span><span class="ansi-red-fg">         </span>copy<span class="ansi-blue-fg">.</span>data <span class="ansi-blue-fg">=</span> _prepare_data<span class="ansi-blue-fg">(</span>original_data<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    364</span> 
 <span class="ansi-green-intense-fg ansi-bold">    365</span>         <span class="ansi-green-fg">if</span> original_data <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> Undefined<span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">_prepare_data</span><span class="ansi-blue-fg">(data, context)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/vegalite/v4/api.py</span> in <span class="ansi-cyan-fg">_prepare_data</span><span class="ansi-blue-fg">(data, context)</span>
 <span class="ansi-green-intense-fg ansi-bold">     82</span>     <span class="ansi-red-fg"># convert dataframes  or objects with __geo_interface__ to dict</span>
 <span class="ansi-green-intense-fg ansi-bold">     83</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">or</span> hasattr<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;__geo_interface__&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> _pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> data_transformers<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     85</span> 
 <span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-red-fg"># convert string input to a URLData</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
-<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    632</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    633</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 634</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    635</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    636</span> 
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/vegalite/data.py</span> in <span class="ansi-cyan-fg">default_data_transformer</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/vegalite/data.py</span> in <span class="ansi-cyan-fg">default_data_transformer</span><span class="ansi-blue-fg">(data, max_rows)</span>
 <span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-blue-fg">@</span>curried<span class="ansi-blue-fg">.</span>curry
 <span class="ansi-green-intense-fg ansi-bold">     18</span> <span class="ansi-green-fg">def</span> default_data_transformer<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> max_rows<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">5000</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> curried<span class="ansi-blue-fg">.</span>pipe<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> limit_rows<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">=</span>max_rows<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> to_values<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     20</span> 
 <span class="ansi-green-intense-fg ansi-bold">     21</span> 
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    625</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    626</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 627</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    628</span>     <span class="ansi-green-fg">return</span> data
-<span class="ansi-green-intense-fg ansi-bold">    629</span> 
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">pipe</span><span class="ansi-blue-fg">(data, *funcs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    632</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    633</span>     <span class="ansi-green-fg">for</span> func <span class="ansi-green-fg">in</span> funcs<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 634</span><span class="ansi-red-fg">         </span>data <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    635</span>     <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">    636</span> 
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/toolz/functoolz.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
 <span class="ansi-green-intense-fg ansi-bold">    301</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    302</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 303</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_partial<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    304</span>         <span class="ansi-green-fg">except</span> TypeError <span class="ansi-green-fg">as</span> exc<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">    305</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_should_curry<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">,</span> exc<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/altair/utils/data.py</span> in <span class="ansi-cyan-fg">limit_rows</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-fg">~/.local/lib/python3.8/site-packages/altair/utils/data.py</span> in <span class="ansi-cyan-fg">limit_rows</span><span class="ansi-blue-fg">(data, max_rows)</span>
+<span class="ansi-green-intense-fg ansi-bold">     78</span>             <span class="ansi-green-fg">return</span> data
+<span class="ansi-green-intense-fg ansi-bold">     79</span>     <span class="ansi-green-fg">if</span> max_rows <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">and</span> len<span class="ansi-blue-fg">(</span>values<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">&gt;</span> max_rows<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 80</span><span class="ansi-red-fg">         raise MaxRowsError(
+</span><span class="ansi-green-intense-fg ansi-bold">     81</span>             <span class="ansi-blue-fg">&#34;The number of rows in your dataset is greater &#34;</span>
 <span class="ansi-green-intense-fg ansi-bold">     82</span>             <span class="ansi-blue-fg">&#34;than the maximum allowed ({}). &#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">     83</span>             <span class="ansi-blue-fg">&#34;For information on how to plot larger datasets &#34;</span>
-<span class="ansi-green-fg">---&gt; 84</span><span class="ansi-red-fg">             </span><span class="ansi-blue-fg">&#34;in Altair, see the documentation&#34;</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>max_rows<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     85</span>         )
-<span class="ansi-green-intense-fg ansi-bold">     86</span>     <span class="ansi-green-fg">return</span> data
 
 <span class="ansi-red-fg">MaxRowsError</span>: The number of rows in your dataset is greater than the maximum allowed (5000). For information on how to plot larger datasets in Altair, see the documentation</pre>
 </div>
@@ -413,322 +406,788 @@ window.onload = wrap_img;
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-    #T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6 th {
+    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fd th {
           text-align: center;
-    }#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col8,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col0,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col1,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col2,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col3,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col4,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col5,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col6,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col7,#T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col8{
+    }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col0 {
             text-align:  center;
-        }</style><table id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Estado</th>        <th class="col_heading level0 col1">Data</th>        <th class="col_heading level0 col2">Casos confirmados</th>        <th class="col_heading level0 col3">Ativos</th>        <th class="col_heading level0 col4">1% dos ativos</th>        <th class="col_heading level0 col5">5% dos ativos</th>        <th class="col_heading level0 col6">12% dos ativos</th>        <th class="col_heading level0 col7">UTIs</th>        <th class="col_heading level0 col8">35% das UTIs</th>    </tr></thead><tbody>
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col8 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col0 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col1 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col2 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col3 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col4 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col5 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col6 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col7 {
+            text-align:  center;
+        }    #T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col8 {
+            text-align:  center;
+        }</style><table id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fd"><thead>    <tr>        <th class="blank level0"></th>        <th class="col_heading level0 col0">Estado</th>        <th class="col_heading level0 col1">Data</th>        <th class="col_heading level0 col2">Casos confirmados</th>        <th class="col_heading level0 col3">Ativos</th>        <th class="col_heading level0 col4">1% dos ativos</th>        <th class="col_heading level0 col5">5% dos ativos</th>        <th class="col_heading level0 col6">12% dos ativos</th>        <th class="col_heading level0 col7">UTIs</th>        <th class="col_heading level0 col8">35% das UTIs</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row0" class="row_heading level0 row0">0</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col0" class="data row0 col0">AC</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col1" class="data row0 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col2" class="data row0 col2">29272</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col3" class="data row0 col3">2336</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col4" class="data row0 col4">23</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col5" class="data row0 col5">117</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col6" class="data row0 col6">280</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col7" class="data row0 col7">58</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row0_col8" class="data row0 col8">20</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row0" class="row_heading level0 row0">0</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col0" class="data row0 col0">AC</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col1" class="data row0 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col2" class="data row0 col2">29031</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col3" class="data row0 col3">2316</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col4" class="data row0 col4">23</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col5" class="data row0 col5">116</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col6" class="data row0 col6">278</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col7" class="data row0 col7">58</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow0_col8" class="data row0 col8">20</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row1" class="row_heading level0 row1">2</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col0" class="data row1 col0">AM</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col1" class="data row1 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col2" class="data row1 col2">147864</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col3" class="data row1 col3">11798</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col4" class="data row1 col4">118</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col5" class="data row1 col5">590</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col6" class="data row1 col6">1416</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col7" class="data row1 col7">450</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row1_col8" class="data row1 col8">157</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row1" class="row_heading level0 row1">2</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col0" class="data row1 col0">AM</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col1" class="data row1 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col2" class="data row1 col2">147038</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col3" class="data row1 col3">11732</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col4" class="data row1 col4">117</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col5" class="data row1 col5">587</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col6" class="data row1 col6">1408</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col7" class="data row1 col7">450</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow1_col8" class="data row1 col8">157</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row2" class="row_heading level0 row2">3</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col0" class="data row2 col0">AP</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col1" class="data row2 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col2" class="data row2 col2">49593</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col3" class="data row2 col3">3957</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col4" class="data row2 col4">40</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col5" class="data row2 col5">198</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col6" class="data row2 col6">475</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col7" class="data row2 col7">78</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row2_col8" class="data row2 col8">27</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row2" class="row_heading level0 row2">3</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col0" class="data row2 col0">AP</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col1" class="data row2 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col2" class="data row2 col2">49303</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col3" class="data row2 col3">3934</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col4" class="data row2 col4">39</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col5" class="data row2 col5">197</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col6" class="data row2 col6">472</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col7" class="data row2 col7">78</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow2_col8" class="data row2 col8">27</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row3" class="row_heading level0 row3">4</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col0" class="data row3 col0">BA</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col1" class="data row3 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col2" class="data row3 col2">327327</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col3" class="data row3 col3">26116</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col4" class="data row3 col4">261</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col5" class="data row3 col5">1306</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col6" class="data row3 col6">3134</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col7" class="data row3 col7">1573</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row3_col8" class="data row3 col8">550</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row3" class="row_heading level0 row3">4</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col0" class="data row3 col0">BA</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col1" class="data row3 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col2" class="data row3 col2">324964</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col3" class="data row3 col3">25928</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col4" class="data row3 col4">259</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col5" class="data row3 col5">1296</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col6" class="data row3 col6">3111</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col7" class="data row3 col7">1573</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow3_col8" class="data row3 col8">550</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row4" class="row_heading level0 row4">5</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col0" class="data row4 col0">CE</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col1" class="data row4 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col2" class="data row4 col2">260642</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col3" class="data row4 col3">20796</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col4" class="data row4 col4">208</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col5" class="data row4 col5">1040</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col6" class="data row4 col6">2496</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col7" class="data row4 col7">1002</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row4_col8" class="data row4 col8">350</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row4" class="row_heading level0 row4">5</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col0" class="data row4 col0">CE</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col1" class="data row4 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col2" class="data row4 col2">259767</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col3" class="data row4 col3">20726</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col4" class="data row4 col4">207</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col5" class="data row4 col5">1036</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col6" class="data row4 col6">2487</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col7" class="data row4 col7">1002</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow4_col8" class="data row4 col8">350</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row5" class="row_heading level0 row5">6</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col0" class="data row5 col0">DF</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col1" class="data row5 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col2" class="data row5 col2">201230</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col3" class="data row5 col3">16056</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col4" class="data row5 col4">161</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col5" class="data row5 col5">803</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col6" class="data row5 col6">1927</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col7" class="data row5 col7">997</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row5_col8" class="data row5 col8">348</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row5" class="row_heading level0 row5">6</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col0" class="data row5 col0">DF</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col1" class="data row5 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col2" class="data row5 col2">199569</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col3" class="data row5 col3">15923</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col4" class="data row5 col4">159</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col5" class="data row5 col5">796</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col6" class="data row5 col6">1911</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col7" class="data row5 col7">997</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow5_col8" class="data row5 col8">348</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row6" class="row_heading level0 row6">7</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col0" class="data row6 col0">ES</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col1" class="data row6 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col2" class="data row6 col2">140701</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col3" class="data row6 col3">11226</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col4" class="data row6 col4">112</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col5" class="data row6 col5">561</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col6" class="data row6 col6">1347</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col7" class="data row6 col7">804</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row6_col8" class="data row6 col8">281</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row6" class="row_heading level0 row6">7</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col0" class="data row6 col0">ES</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col1" class="data row6 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col2" class="data row6 col2">138462</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col3" class="data row6 col3">11047</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col4" class="data row6 col4">110</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col5" class="data row6 col5">552</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col6" class="data row6 col6">1326</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col7" class="data row6 col7">804</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow6_col8" class="data row6 col8">281</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row7" class="row_heading level0 row7">8</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col0" class="data row7 col0">GO</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col1" class="data row7 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col2" class="data row7 col2">231182</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col3" class="data row7 col3">18445</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col4" class="data row7 col4">184</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col5" class="data row7 col5">922</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col6" class="data row7 col6">2213</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col7" class="data row7 col7">1200</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row7_col8" class="data row7 col8">420</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row7" class="row_heading level0 row7">8</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col0" class="data row7 col0">GO</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col1" class="data row7 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col2" class="data row7 col2">228714</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col3" class="data row7 col3">18248</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col4" class="data row7 col4">182</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col5" class="data row7 col5">912</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col6" class="data row7 col6">2190</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col7" class="data row7 col7">1200</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow7_col8" class="data row7 col8">420</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row8" class="row_heading level0 row8">9</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col0" class="data row8 col0">MA</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col1" class="data row8 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col2" class="data row8 col2">179170</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col3" class="data row8 col3">14295</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col4" class="data row8 col4">143</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col5" class="data row8 col5">715</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col6" class="data row8 col6">1715</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col7" class="data row8 col7">682</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row8_col8" class="data row8 col8">238</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row8" class="row_heading level0 row8">9</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col0" class="data row8 col0">MA</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col1" class="data row8 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col2" class="data row8 col2">178549</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col3" class="data row8 col3">14246</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col4" class="data row8 col4">142</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col5" class="data row8 col5">712</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col6" class="data row8 col6">1710</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col7" class="data row8 col7">682</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow8_col8" class="data row8 col8">238</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row9" class="row_heading level0 row9">10</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col0" class="data row9 col0">MG</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col1" class="data row9 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col2" class="data row9 col2">324626</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col3" class="data row9 col3">25901</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col4" class="data row9 col4">259</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col5" class="data row9 col5">1295</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col6" class="data row9 col6">3108</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col7" class="data row9 col7">3151</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row9_col8" class="data row9 col8">1102</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row9" class="row_heading level0 row9">10</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col0" class="data row9 col0">MG</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col1" class="data row9 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col2" class="data row9 col2">321140</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col3" class="data row9 col3">25623</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col4" class="data row9 col4">256</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col5" class="data row9 col5">1281</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col6" class="data row9 col6">3075</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col7" class="data row9 col7">3151</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow9_col8" class="data row9 col8">1102</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row10" class="row_heading level0 row10">11</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col0" class="data row10 col0">MS</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col1" class="data row10 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col2" class="data row10 col2">75076</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col3" class="data row10 col3">5990</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col4" class="data row10 col4">60</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col5" class="data row10 col5">300</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col6" class="data row10 col6">719</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col7" class="data row10 col7">432</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row10_col8" class="data row10 col8">151</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row10" class="row_heading level0 row10">11</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col0" class="data row10 col0">MS</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col1" class="data row10 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col2" class="data row10 col2">74567</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col3" class="data row10 col3">5949</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col4" class="data row10 col4">59</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col5" class="data row10 col5">297</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col6" class="data row10 col6">714</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col7" class="data row10 col7">432</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow10_col8" class="data row10 col8">151</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row11" class="row_heading level0 row11">12</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col0" class="data row11 col0">MT</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col1" class="data row11 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col2" class="data row11 col2">132949</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col3" class="data row11 col3">10608</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col4" class="data row11 col4">106</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col5" class="data row11 col5">530</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col6" class="data row11 col6">1273</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col7" class="data row11 col7">591</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row11_col8" class="data row11 col8">206</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row11" class="row_heading level0 row11">12</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col0" class="data row11 col0">MT</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col1" class="data row11 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col2" class="data row11 col2">131854</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col3" class="data row11 col3">10520</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col4" class="data row11 col4">105</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col5" class="data row11 col5">526</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col6" class="data row11 col6">1262</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col7" class="data row11 col7">591</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow11_col8" class="data row11 col8">206</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row12" class="row_heading level0 row12">13</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col0" class="data row12 col0">PA</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col1" class="data row12 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col2" class="data row12 col2">238835</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col3" class="data row12 col3">19056</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col4" class="data row12 col4">191</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col5" class="data row12 col5">953</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col6" class="data row12 col6">2287</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col7" class="data row12 col7">661</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row12_col8" class="data row12 col8">231</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row12" class="row_heading level0 row12">13</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col0" class="data row12 col0">PA</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col1" class="data row12 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col2" class="data row12 col2">237938</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col3" class="data row12 col3">18984</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col4" class="data row12 col4">190</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col5" class="data row12 col5">949</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col6" class="data row12 col6">2278</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col7" class="data row12 col7">661</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow12_col8" class="data row12 col8">231</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row13" class="row_heading level0 row13">14</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col0" class="data row13 col0">PB</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col1" class="data row13 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col2" class="data row13 col2">126073</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col3" class="data row13 col3">10059</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col4" class="data row13 col4">101</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col5" class="data row13 col5">503</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col6" class="data row13 col6">1207</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col7" class="data row13 col7">536</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row13_col8" class="data row13 col8">187</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row13" class="row_heading level0 row13">14</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col0" class="data row13 col0">PB</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col1" class="data row13 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col2" class="data row13 col2">125713</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col3" class="data row13 col3">10030</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col4" class="data row13 col4">100</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col5" class="data row13 col5">502</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col6" class="data row13 col6">1204</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col7" class="data row13 col7">536</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow13_col8" class="data row13 col8">187</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row14" class="row_heading level0 row14">15</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col0" class="data row14 col0">PE</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col1" class="data row14 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col2" class="data row14 col2">153299</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col3" class="data row14 col3">12231</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col4" class="data row14 col4">122</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col5" class="data row14 col5">612</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col6" class="data row14 col6">1468</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col7" class="data row14 col7">1647</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row14_col8" class="data row14 col8">576</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row14" class="row_heading level0 row14">15</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col0" class="data row14 col0">PE</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col1" class="data row14 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col2" class="data row14 col2">152998</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col3" class="data row14 col3">12207</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col4" class="data row14 col4">122</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col5" class="data row14 col5">610</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col6" class="data row14 col6">1465</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col7" class="data row14 col7">1647</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow14_col8" class="data row14 col8">576</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row15" class="row_heading level0 row15">16</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col0" class="data row15 col0">PI</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col1" class="data row15 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col2" class="data row15 col2">103461</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col3" class="data row15 col3">8255</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col4" class="data row15 col4">83</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col5" class="data row15 col5">413</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col6" class="data row15 col6">991</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col7" class="data row15 col7">293</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row15_col8" class="data row15 col8">102</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row15" class="row_heading level0 row15">16</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col0" class="data row15 col0">PI</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col1" class="data row15 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col2" class="data row15 col2">102268</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col3" class="data row15 col3">8160</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col4" class="data row15 col4">82</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col5" class="data row15 col5">408</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col6" class="data row15 col6">979</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col7" class="data row15 col7">293</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow15_col8" class="data row15 col8">102</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row16" class="row_heading level0 row16">17</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col0" class="data row16 col0">PR</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col1" class="data row16 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col2" class="data row16 col2">194689</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col3" class="data row16 col3">15534</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col4" class="data row16 col4">155</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col5" class="data row16 col5">777</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col6" class="data row16 col6">1864</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col7" class="data row16 col7">2444</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row16_col8" class="data row16 col8">855</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row16" class="row_heading level0 row16">17</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col0" class="data row16 col0">PR</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col1" class="data row16 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col2" class="data row16 col2">191135</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col3" class="data row16 col3">15250</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col4" class="data row16 col4">152</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col5" class="data row16 col5">762</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col6" class="data row16 col6">1830</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col7" class="data row16 col7">2444</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow16_col8" class="data row16 col8">855</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row17" class="row_heading level0 row17">18</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col0" class="data row17 col0">RJ</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col1" class="data row17 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col2" class="data row17 col2">284053</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col3" class="data row17 col3">22664</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col4" class="data row17 col4">227</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col5" class="data row17 col5">1133</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col6" class="data row17 col6">2720</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col7" class="data row17 col7">4008</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row17_col8" class="data row17 col8">1402</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row17" class="row_heading level0 row17">18</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col0" class="data row17 col0">RJ</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col1" class="data row17 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col2" class="data row17 col2">283407</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col3" class="data row17 col3">22612</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col4" class="data row17 col4">226</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col5" class="data row17 col5">1131</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col6" class="data row17 col6">2713</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col7" class="data row17 col7">4008</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow17_col8" class="data row17 col8">1402</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row18" class="row_heading level0 row18">19</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col0" class="data row18 col0">RN</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col1" class="data row18 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col2" class="data row18 col2">73423</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col3" class="data row18 col3">5858</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col4" class="data row18 col4">59</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col5" class="data row18 col5">293</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col6" class="data row18 col6">703</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col7" class="data row18 col7">526</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row18_col8" class="data row18 col8">184</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row18" class="row_heading level0 row18">19</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col0" class="data row18 col0">RN</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col1" class="data row18 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col2" class="data row18 col2">72900</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col3" class="data row18 col3">5816</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col4" class="data row18 col4">58</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col5" class="data row18 col5">291</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col6" class="data row18 col6">698</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col7" class="data row18 col7">526</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow18_col8" class="data row18 col8">184</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row19" class="row_heading level0 row19">20</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col0" class="data row19 col0">RO</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col1" class="data row19 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col2" class="data row19 col2">68126</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col3" class="data row19 col3">5436</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col4" class="data row19 col4">54</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col5" class="data row19 col5">272</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col6" class="data row19 col6">652</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col7" class="data row19 col7">285</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row19_col8" class="data row19 col8">99</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row19" class="row_heading level0 row19">20</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col0" class="data row19 col0">RO</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col1" class="data row19 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col2" class="data row19 col2">67812</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col3" class="data row19 col3">5411</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col4" class="data row19 col4">54</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col5" class="data row19 col5">271</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col6" class="data row19 col6">649</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col7" class="data row19 col7">285</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow19_col8" class="data row19 col8">99</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row20" class="row_heading level0 row20">21</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col0" class="data row20 col0">RR</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col1" class="data row20 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col2" class="data row20 col2">52701</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col3" class="data row20 col3">4205</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col4" class="data row20 col4">42</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col5" class="data row20 col5">210</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col6" class="data row20 col6">505</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col7" class="data row20 col7">25</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row20_col8" class="data row20 col8">8</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row20" class="row_heading level0 row20">21</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col0" class="data row20 col0">RR</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col1" class="data row20 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col2" class="data row20 col2">52440</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col3" class="data row20 col3">4184</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col4" class="data row20 col4">42</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col5" class="data row20 col5">209</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col6" class="data row20 col6">502</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col7" class="data row20 col7">25</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow20_col8" class="data row20 col8">8</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row21" class="row_heading level0 row21">22</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col0" class="data row21 col0">RS</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col1" class="data row21 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col2" class="data row21 col2">214970</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col3" class="data row21 col3">17152</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col4" class="data row21 col4">172</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col5" class="data row21 col5">858</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col6" class="data row21 col6">2058</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col7" class="data row21 col7">1660</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row21_col8" class="data row21 col8">581</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row21" class="row_heading level0 row21">22</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col0" class="data row21 col0">RS</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col1" class="data row21 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col2" class="data row21 col2">213782</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col3" class="data row21 col3">17057</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col4" class="data row21 col4">171</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col5" class="data row21 col5">853</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col6" class="data row21 col6">2047</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col7" class="data row21 col7">1660</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow21_col8" class="data row21 col8">581</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row22" class="row_heading level0 row22">23</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col0" class="data row22 col0">SC</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col1" class="data row22 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col2" class="data row22 col2">228403</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col3" class="data row22 col3">18224</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col4" class="data row22 col4">182</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col5" class="data row22 col5">911</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col6" class="data row22 col6">2187</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col7" class="data row22 col7">1064</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row22_col8" class="data row22 col8">372</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row22" class="row_heading level0 row22">23</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col0" class="data row22 col0">SC</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col1" class="data row22 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col2" class="data row22 col2">226614</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col3" class="data row22 col3">18081</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col4" class="data row22 col4">181</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col5" class="data row22 col5">904</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col6" class="data row22 col6">2170</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col7" class="data row22 col7">1064</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow22_col8" class="data row22 col8">372</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row23" class="row_heading level0 row23">24</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col0" class="data row23 col0">SE</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col1" class="data row23 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col2" class="data row23 col2">80234</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col3" class="data row23 col3">6402</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col4" class="data row23 col4">64</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col5" class="data row23 col5">320</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col6" class="data row23 col6">768</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col7" class="data row23 col7">295</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row23_col8" class="data row23 col8">103</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row23" class="row_heading level0 row23">24</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col0" class="data row23 col0">SE</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col1" class="data row23 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col2" class="data row23 col2">79501</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col3" class="data row23 col3">6343</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col4" class="data row23 col4">63</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col5" class="data row23 col5">317</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col6" class="data row23 col6">761</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col7" class="data row23 col7">295</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow23_col8" class="data row23 col8">103</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row24" class="row_heading level0 row24">25</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col0" class="data row24 col0">SP</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col1" class="data row24 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col2" class="data row24 col2">1039029</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col3" class="data row24 col3">82901</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col4" class="data row24 col4">829</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col5" class="data row24 col5">4145</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col6" class="data row24 col6">9948</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col7" class="data row24 col7">9269</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row24_col8" class="data row24 col8">3244</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row24" class="row_heading level0 row24">25</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col0" class="data row24 col0">SP</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col1" class="data row24 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col2" class="data row24 col2">1034816</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col3" class="data row24 col3">82565</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col4" class="data row24 col4">826</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col5" class="data row24 col5">4128</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col6" class="data row24 col6">9908</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col7" class="data row24 col7">9269</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow24_col8" class="data row24 col8">3244</td>
             </tr>
             <tr>
-                        <th id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6level0_row25" class="row_heading level0 row25">26</th>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col0" class="data row25 col0">TO</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col1" class="data row25 col1">10/13/20</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col2" class="data row25 col2">71269</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col3" class="data row25 col3">5686</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col4" class="data row25 col4">57</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col5" class="data row25 col5">284</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col6" class="data row25 col6">682</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col7" class="data row25 col7">161</td>
-                        <td id="T_9bd4d330_0de6_11eb_ba20_000d3a8d25b6row25_col8" class="data row25 col8">56</td>
+                        <th id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdlevel0_row25" class="row_heading level0 row25">26</th>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col0" class="data row25 col0">TO</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col1" class="data row25 col1">10/10/20</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col2" class="data row25 col2">71048</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col3" class="data row25 col3">5669</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col4" class="data row25 col4">57</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col5" class="data row25 col5">283</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col6" class="data row25 col6">680</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col7" class="data row25 col7">161</td>
+                        <td id="T_b4040958_0c06_11eb_9f7e_d89c67b9f9fdrow25_col8" class="data row25 col8">56</td>
             </tr>
     </tbody></table>
 </div>
@@ -778,7 +1237,7 @@ window.onload = wrap_img;
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<small class="float-right">Última atualização em 13/10/2020</small>
+<small class="float-right">Última atualização em 10/10/2020</small>
 </div>
 
 </div>
@@ -799,13 +1258,6 @@ window.onload = wrap_img;
 <li>leitos disponíveis: <a href="https://oglobo.globo.com/sociedade/coronavirus/coronavirus-ministerio-estima-que-sus-tem-de-12-13-mil-leitos-de-uti-disponiveis-para-atender-pacientes-1-24328523">artigo oglobo</a></li>
 <li>pacientes que precisam de UTI: <a href="https://linkinghub.elsevier.com/retrieve/pii/S2213260020301612">artigo the lancet</a></li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered celltag_papermill-error-cell-tag"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><span id="papermill-error-cell" style="color:red; font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:2em;">Execution using papermill encountered an exception here and stopped:</span></p>
 
 </div>
 </div>
