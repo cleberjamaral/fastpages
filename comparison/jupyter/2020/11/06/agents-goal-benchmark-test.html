@@ -253,10 +253,13 @@ window.onload = wrap_img;
   taskSubmitted (0.9 vs 0.2): Data of previous version is not normally distributed.
 
 
+  taskSubmitted (0.9 vs 0.1): Data of previous version is not normally distributed.
+
+
 Comparing goal: restarted_lost...
 
 
-  restarted_lost (0.9 vs 0.2): The new version does not present a normal distribution!
+  restarted_lost (0.9): The new version does not present a normal distribution!
 </pre>
 </div>
 </div>
@@ -278,7 +281,7 @@ Comparing goal: restarted_lost...
 <pre>Comparing goal: restarted_noact...
 
 
-  restarted_noact (0.9 vs 0.2): The new version does not present a normal distribution!
+  restarted_noact (0.9): The new version does not present a normal distribution!
 </pre>
 </div>
 </div>
@@ -300,6 +303,30 @@ Comparing goal: restarted_lost...
 <pre>Comparing goal: excessive_delay...
 
 
+  excessive_delay (0.9 vs 0.8): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.7): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.6): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.5): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.4): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.3): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.2): There is no evidence of difference!
+
+
+  excessive_delay (0.9 vs 0.1): There is no evidence of difference!
+
+
 </pre>
 </div>
 </div>
@@ -312,23 +339,6 @@ Comparing goal: restarted_lost...
 &lt;ipython-input-9-e4a5644d81ae&gt;:9: RuntimeWarning: invalid value encountered in double_scalars
   z = (ma - mb)/os
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-e625588a7a52&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     24</span>                         print_distribution<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span>previous_version<span class="ansi-blue-fg">,</span> df<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     25</span>                     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 26</span><span class="ansi-red-fg">                         </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;  &#34;</span><span class="ansi-blue-fg">+</span>goal<span class="ansi-blue-fg">+</span><span class="ansi-blue-fg">&#34; (&#34;</span><span class="ansi-blue-fg">+</span>versions_list<span class="ansi-blue-fg">[</span>new_version<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;vs&#34;</span><span class="ansi-blue-fg">,</span>versions_list<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">-</span>previous_version<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;): There is no evidence of difference!&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     27</span>                         print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;\n&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     28</span>                 <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">TypeError</span>: can only concatenate str (not &#34;numpy.float64&#34;) to str</pre>
 </div>
 </div>
 
