@@ -26,3 +26,4 @@ requests
 absl-py
 wheel
 scipy
+manim
