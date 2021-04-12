@@ -177,109 +177,6 @@ window.onload = wrap_img;
     
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">manim</span> DecToBin -qm -v CRITICAL
-
-class DecToBin(Scene):
-    def print_result(self, dividend, divisor, dd, dv, rlist):
-        quotient = dividend // divisor
-        remainder = dividend % divisor
-
-        re = Tex(str(remainder)).next_to(dd, DOWN, buff=MED_SMALL_BUFF)
-        rlist.append(re)
-        qu = Tex(str(quotient)).next_to(dv, DOWN, buff=MED_SMALL_BUFF)
-        self.play(Write(qu))
-        self.play(Write(re))
-
-        ndv = Tex(str(divisor)).next_to(qu, RIGHT, buff=MED_SMALL_BUFF)
-        if quotient &gt;= divisor:
-            semi_box = SemiBox(ndv, color = YELLOW)
-            self.play(Create(semi_box))
-            self.play(Write(ndv))
-
-        return quotient, qu, ndv
-
-    def construct(self):
-        divisor = 2
-
-        dd = Tex(str(dividend))
-        self.play(Write(dd))
-        self.play(dd.animate.to_corner(UP + LEFT))
-        dv = Tex(str(divisor)).next_to(dd, RIGHT, buff=MED_SMALL_BUFF)
-        semi_box = SemiBox(dv, color = YELLOW)
-        self.play(Create(semi_box))
-        self.play(Write(dv))
-
-        rlist = []
-        quotient, qu, ndv = self.print_result(dividend, divisor, dd, dv, rlist)
-        while quotient &gt;= divisor:
-            quotient, qu, ndv = self.print_result(quotient, divisor, qu, ndv, rlist);
-        bin = qu.copy()
-
-        rect = SurroundingRectangle(qu, color = PINK)
-        self.play(Create(rect))
-        clist = [bin]
-        for r in reversed(rlist):
-            rect = SurroundingRectangle(r, color = PINK)
-            self.play(Create(rect))
-            rem = r.copy()
-            clist.append(rem)
-
-        for c in clist:
-            c.generate_target()
-            if clist.index(c) == 0:
-                c.target.move_to(ORIGIN)
-            else:
-                c.target.next_to(clist[clist.index(c)-1], RIGHT)
-            c.set_height(2*c.get_height())
-            self.play(
-                MoveToTarget(c)
-            )
-            self.play(
-                c.animate.scale(1.5)
-            )
-
-        amsb = Arrow(start=UP, end=DOWN, buff=SMALL_BUFF).next_to(clist[0], DOWN)
-        msb = Tex(r&quot;MSB&quot;).next_to(amsb, DOWN)
-        tmsb = Tex(r&quot;Most~Significant~Bit&quot;)
-        tmsb.next_to(msb, DOWN)
-        tmsb.scale(0.8)
-        amsb.set_color(GREEN)
-        msb.set_color(GREEN)
-        tmsb.set_color(GREEN)
-        self.play(
-            Create(amsb),
-            Create(msb),
-            Create(tmsb),
-            tmsb.animate.shift(LEFT),
-            clist[0].animate.scale(1.5)
-        )
-
-        alsb = Arrow(start=UP, end=DOWN, buff=SMALL_BUFF).next_to(clist[-1], DOWN)
-        lsb = Tex(r&quot;LSB&quot;).next_to(alsb, DOWN)
-        tlsb = Tex(r&quot;Least~Significant~Bit&quot;)
-        tlsb.scale(0.8)
-        tlsb.next_to(lsb, DOWN)
-        alsb.set_color(BLUE)
-        lsb.set_color(BLUE)
-        tlsb.set_color(BLUE)
-        self.play(
-            Create(alsb),
-            Create(lsb),
-            Create(tlsb),
-            tlsb.animate.shift(RIGHT*1.5),
-            clist[-1].animate.scale(0.75)
-        )
-
-        self.wait()
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -311,8 +208,34 @@ class DecToBin(Scene):
   hline = Line(start=[-0.2,0,0], end=[mobject.get_width(),0,0], stroke_color=YELLOW).next_to(mobject, DOWN, buff=SMALL_BUFF)
 &lt;ipython-input-2-1e2ae16a364f&gt;:7: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
   vline = Line(start=[0,-0.2,0], end=[0,mobject.get_height(),0], stroke_color=YELLOW).next_to(mobject, LEFT, buff=SMALL_BUFF)
-Animation 31: Create(SurroundingRectangle):   0%|          | 0/30 [00:00&lt;?, ?it/s]             </pre>
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+&lt;string&gt;:53: DeprecationWarning: This method is not guaranteed to stay around. Please prefer setting the attribute normally or with Mobject.set().
+                                                                                         
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<video src="media/jupyter/0de58643931d5266f85c60d0243b607d1ebcbcf1.mp4" controls="" autoplay="" loop="" style="max-width: 25vw;">
+      Your browser does not support the <code>video</code> element.
+    </video>
+</div>
+
 </div>
 
 </div>
